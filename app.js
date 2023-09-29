@@ -1,20 +1,22 @@
-const size = prompt('Enter grid size (50 recommended): ');
-let color = 'white';
+const size = prompt('Enter grid size') || 50;
+let color = 'black';
+let isMouseDown = false;
 
 function createCanva(size) {
   const container = document.querySelector('#container');
-  document.getElementById('container').style.borderStyle = 'solid';
-  document.getElementById('container').style.borderColor = 'black';
-  for (i = 0; i < size; i++) {
+  document.getElementById('current').style.backgroundColor = color;
+  for (let i = 0; i < size; i++) {
     const div = document.createElement('div');
     div.classList.add('flex-grid');
-    for(j = 0; j < size; j++) {
+    for(let j = 0; j < size; j++) {
       const innerDiv = document.createElement('div');
       innerDiv.classList.add('col');
       innerDiv.addEventListener('mouseover', () => {
-        innerDiv.style.background = color;
+        if (isMouseDown) {
+          innerDiv.style.background = color;
+        }
       });
-      innerDiv.addEventListener('mouseout', () => {
+      innerDiv.addEventListener('click', () => {
         innerDiv.style.background = color;
       });
       div.appendChild(innerDiv);
@@ -59,5 +61,11 @@ yellowBth.addEventListener('click', () => {
   color = 'yellow';
   document.getElementById('current').style.backgroundColor = 'yellow';
 });
+document.body.onmousedown = function() { 
+  isMouseDown = true;
+}
+document.body.onmouseup = function() {
+  isMouseDown = false;
+}
 
 createCanva(size);
