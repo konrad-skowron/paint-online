@@ -16,6 +16,7 @@ div {
   width: 40%;
   margin: 0 auto;
   border: 1px solid black;
+  margin-top: 1%;
 }
 
 .flex-grid {
