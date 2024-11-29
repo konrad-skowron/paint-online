@@ -41,42 +41,49 @@ div {
   background-color: white;
   padding: 5%;
   scale: 0.5;
+  border-radius: 50%;
 }
 
 #black {
   background-color: black;
   padding: 5%;
   scale: 0.5;
+  border-radius: 50%;
 }
 
 #gray {
   background-color: gray;
   padding: 5%;
   scale: 0.5;
+  border-radius: 50%;
 }
 
 #red {
   background-color: red;
   padding: 5%;
   scale: 0.5;
+  border-radius: 50%;
 }
 
 #green {
   background-color: green;
   padding: 5%;
   scale: 0.5;
+  border-radius: 50%;
 }
 
 #blue {
   background-color: blue;
   padding: 5%;
   scale: 0.5;
+  border-radius: 50%;
 }
 
 #yellow {
   background-color: yellow;
   padding: 5%;
   scale: 0.5;
+  border-radius: 50%;
 }
 
 #current {
@@ -84,4 +91,5 @@ div {
   padding: 5%;
   border: 1px solid black;
   margin-right: 5%;
+  border-radius: 50%;
 }
