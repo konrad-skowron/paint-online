@@ -1,4 +1,4 @@
-const size = prompt('Enter grid size') || 50;
+const size = prompt('Enter grid size (default value: 50)') || 50;
 let color = 'black';
 let isMouseDown = false;
 
